@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BELLATOR</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="description" content="$BELLATOR. The Martian Dog" />
+    <link rel="icon" href="./images/logo_ico.ico" />
+    <link rel="canonical" href="https://elonlovemarvin.com/" />
+    <meta name="robots" content="noindex" />
+    <meta property="og:title" content="MARVIN" />
+    <meta property="og:image" content="/images/big_logo.png" />
+    <meta property="og:image:width" content="2500" />
+    <meta property="og:image:height" content="1330" />
+    <meta property="og:url" content="https://elonlovemarvin.com/" />
+    <meta property="og:site_name" content="Crypto" />
+    <meta property="og:description" content="$BELLATOR. The Martian Dog" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MARVIN" />
+    <meta name="twitter:image" content="/images/big_logo.png" />
+    <meta name="twitter:description" content="$BELLATOR. The Martian Dog" />
+    <script src="./js/tailwindcss-browser.js"></script>
+    <style>
+      @font-face {
+        font-family: "DynaPuff-Regular";
+        src: url("./fonts/DynaPuff/webfonts/DynaPuff-Regular.woff2")
+            format("woff2"),
+          url("./fonts/DynaPuff/otf/DynaPuff-Regular.otf") format("opentype"),
+          url("./fonts/DynaPuff/ttf/DynaPuff-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        font-family: "DynaPuff-Regular", Arial, sans-serif;
+      }
+    </style>
+
+    <style type="text/tailwindcss">
+      .title-bold {
+        @apply font-bold;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+    </style>
+    <style>
+      .mobile-nav-btn {
+        background-image: url(./images/nav-bg.png);
+      }
+      .mobile-nav-btn:hover {
+        background-image: url(./images/nav-bg-selected.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="w-full text-white text-shadow-[-0.5px_-0.5px_0_#000,_0.5px_-0.5px_0_#000,_-0.5px_0.5px_0_#000,_0.5px_0.5px_0_#000] lg:text-shadow-[-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]"
+    >
+      <div
+        class="relative pt-2 px-3 lg:pt-12 lg:px-16 w-full aspect-[192/95] bg-[url(./images/mainpage1.png)] bg-cover bg-no-repeat"
+      >
+        <div class="flex justify-between text-xs lg:text-xl">
+          <div class="flex items-center gap-2">
+            <img src="./images/logo.png" alt="" class="w-6 h-6 lg:w-9 lg:h-9" />
+            <div>BELLATOR</div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="hidden lg:block cursor-pointer" id="nav-about-pc">
+              About
+            </div>
+            <div class="hidden lg:block cursor-pointer" id="nav-buy-pc">
+              Buy $BELLATOR
+            </div>
+            <div class="hidden lg:block cursor-pointer" id="nav-narrative-pc">
+              11 Narrative
+            </div>
+            <div>
+              <a href="https://t.me/Cto_Marvin" target="_blank">
+                <img
+                  src="./images/tg.png"
+                  alt=""
+                  class="w-6 h-6 lg:w-9 lg:h-9"
+                />
+              </a>
+            </div>
+            <div>
+              <a href="https://x.com/MARVIN_0xd67" target="_blank">
+                <img
+                  src="./images/x.png"
+                  alt=""
+                  class="w-6 h-6 lg:w-9 lg:h-9"
+                />
+              </a>
+            </div>
+            <div class="lg:hidden relative">
+              <div
+                id="mobile-nav-toggle"
+                class="block w-6 h-6 bg-[url(./images/navlogo.png)] bg-contain bg-no-repeat"
+              ></div>
+              <div
+                id="mobile-nav"
+                class="absolute top-[calc(100%+0.5rem)] right-0 w-[500%] z-999 hidden"
+              >
+                <div
+                  id="nav-about"
+                  class="w-full aspect-[95/23] mobile-nav-btn bg-contain bg-no-repeat flex justify-center items-center"
+                >
+                  About
+                </div>
+                <div
+                  id="nav-buy"
+                  class="w-full aspect-[95/23] mobile-nav-btn bg-contain bg-no-repeat flex justify-center items-center"
+                >
+                  Buy $BELLATOR
+                </div>
+                <div
+                  id="nav-narrative"
+                  class="w-full aspect-[95/23] mobile-nav-btn bg-contain bg-no-repeat flex justify-center items-center"
+                >
+                  11 Narrative
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const aboutView = document.getElementById("about-view");
+            const buyView = document.getElementById("buy-view");
+            const narrativeView = document.getElementById("narrative-view");
+
+            const navAbout = document.getElementById("nav-about");
+            const navBuy = document.getElementById("nav-buy");
+            const navNarrative = document.getElementById("nav-narrative");
+
+            const navAboutPc = document.getElementById("nav-about-pc");
+            const navBuyPc = document.getElementById("nav-buy-pc");
+            const navNarrativePc = document.getElementById("nav-narrative-pc");
+
+            function scrollToAboutView() {
+              aboutView.scrollIntoView({ behavior: "smooth" });
+            }
+            function scrollToBuyView() {
+              buyView.scrollIntoView({ behavior: "smooth" });
+            }
+            function scrollToNarrativeView() {
+              narrativeView.scrollIntoView({ behavior: "smooth" });
+            }
+            navAbout.addEventListener("click", scrollToAboutView);
+            navAboutPc.addEventListener("click", scrollToAboutView);
+            navBuy.addEventListener("click", scrollToBuyView);
+            navBuyPc.addEventListener("click", scrollToBuyView);
+            navNarrative.addEventListener("click", scrollToNarrativeView);
+            navNarrativePc.addEventListener("click", scrollToNarrativeView);
+          });
+          document.addEventListener("DOMContentLoaded", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const mobileNavToggle =
+              document.getElementById("mobile-nav-toggle");
+            const mobileNav = document.getElementById("mobile-nav");
+
+            function handleWindowClick(event) {
+              mobileNav.classList.add("hidden");
+              window.removeEventListener("click", handleWindowClick);
+            }
+
+            mobileNavToggle.addEventListener("click", function () {
+              // mobileNav.classList.toggle('hidden');
+              if (mobileNav.classList.contains("hidden")) {
+                mobileNav.classList.remove("hidden");
+                // window.addEventListener('click', handleWindowClick, true);
+                setTimeout(() => {
+                  window.addEventListener("click", handleWindowClick);
+                }, 0);
+              } else {
+                mobileNav.classList.add("hidden");
+                window.removeEventListener("click", handleWindowClick);
+              }
+            });
+          });
+        </script>
+        <div
+          class="w-2/3 lg:w-1/2 h-full flex flex-col justify-center lg:gap-4 relative z-1"
+        >
+          <div class="text-2xl lg:text-4xl title-bold">0xd67</div>
+          <div class="text-2xl lg:text-6xl title-bold">$BELLATOR</div>
+          <div class="text-xs lg:text-xl">
+            BELLATOR is a Havanese dog owned by Elon Musk. He is Musk’s emotional
+            support dog and often accompanies him through periods of high work
+            pressure. Musk celebrated BELLATOR birthday on November 1 and took
+            him to Mars.
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 right-0 w-1/2 h-5/6 bg-[url(./images/mainpage0.png)] bg-cover bg-bottom-left bg-no-repeat"
+        ></div>
+      </div>
+
+     
+
+      <div
+        id="about-view"
+        class="relative w-full aspect-[1920/1210] bg-[url(./images/mainpage2.png)] bg-cover bg-no-repeat"
+      >
+        <div
+          class="absolute h-2/3 top-[16%] left-[6%] aspect-[508/730] bg-[url(./images/page2img1.png)] bg-contain bg-no-repeat"
+        ></div>
+       
+      </div>
+      <div
+        class="w-full aspect-[1920/635] bg-[url(./images/split_line.png)] bg-contain bg-no-repeat -translate-y-[94%] mb-[-63%] relative z-1"
+      ></div>
+
+      <div
+        id="buy-view"
+        class="relative w-full aspect-[1920/1545] bg-[url(./images/page3img.png)] bg-cover bg-no-repeat"
+      >
+        <div
+          class="absolute bottom-0 left-0 w-[25%] lg:w-[22%] h-[40%] bg-[url(./images/page3img1.png)] bg-cover bg-bottom-right bg-no-repeat"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-[22%] h-[40%] bg-[url(./images/page3img2.png)] bg-cover bg-bottom-left bg-no-repeat hidden lg:block"
+        ></div>
+        <div class="h-full flex flex-col items-center relative z-1">
+          <div class="mt-[36%] text-2xl lg:text-6xl title-bold">
+            Buy $BELLATOR
+          </div>
+          <div
+            class="mt-[1%] lg:mt-[3%] text-xs lg:text-2xl font-bold border-2 border-white px-2 py-1 lg:px-5 lg:py-2 rounded-3xl"
+          >
+            CA: 0xd67176039e2a3e1890da9e25e542c7844c1fd1fd
+          </div>
+
+          <div class="lg:hidden mt-[4%] flex flex-col items-center gap-3">
+            <div class="flex gap-6">
+              <div>
+                <a
+                  href="https://coinmarketcap.com"
+                  target="_blank"
+                >
+                  <img src="./images/cmc.png" alt="" class="w-9 h-9" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.coingecko.com"
+                  target="_blank"
+                >
+                  <img src="./images/cg.png" alt="" class="w-9 h-9" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://dexscreener.com/ethereum/0xd67176039e2a3e1890da9e25e542c7844c1fd1fd"
+                  target="_blank"
+                >
+                  <img src="./images/dexscreen.png" alt="" class="w-9 h-9" />
+                </a>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div>
+                <a
+                  href="https://dextools.io/app/ether/pair-explorer/0xd67176039e2a3e1890da9e25e542c7844c1fd1fd"
+                  target="_blank"
+                >
+                  <img src="./images/toodex.png" alt="" class="w-9 h-9" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://etherscan.io/address/0xd67176039e2a3e1890da9e25e542c7844c1fd1fd"
+                  target="_blank"
+                >
+                  <img src="./images/eth.png" alt="" class="w-9 h-9" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:flex hidden mt-[4%] gap-10">
+            <div>
+              <a
+                href="https://coinmarketcap.com"
+                target="_blank"
+              >
+                <img src="./images/cmc.png" alt="" class="w-18 h-18" />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.coingecko.com"
+                target="_blank"
+              >
+                <img src="./images/cg.png" alt="" class="w-18 h-18" />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://dexscreener.com/ethereum/0xd67176039e2a3e1890da9e25e542c7844c1fd1fd"
+                target="_blank"
+              >
+                <img src="./images/dexscreen.png" alt="" class="w-18 h-18" />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://dextools.io/app/ether/pair-explorer/0xd67176039e2a3e1890da9e25e542c7844c1fd1fd"
+                target="_blank"
+              >
+                <img src="./images/toodex.png" alt="" class="w-18 h-18" />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://etherscan.io/address/0xd67176039e2a3e1890da9e25e542c7844c1fd1fd"
+                target="_blank"
+              >
+                <img src="./images/eth.png" alt="" class="w-18 h-18" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+      <div
+        class="w-full aspect-[1921/1600] bg-[url(./images/page4img2.png)] bg-cover bg-no-repeat"
+      >
+        <div class="h-full flex flex-col items-center justify-center">
+          <div class="text-2xl lg:text-6xl title-bold">ROADMAP</div>
+          <div
+            class="w-[80%] aspect-[1676/1098] bg-[url(./images/page4img.png)] bg-contain bg-no-repeat"
+          ></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div
+        id="narrative-view"
+        class="w-full aspect-[1921/1535] bg-[url(./images/page5img.png)] bg-cover bg-no-repeat -translate-y-[15%] mb-[-15%]"
+      >
+        <div class="w-full flex flex-col justify-center items-center">
+          <div class="w-[98%] lg:w-[80%] h-[70%] mt-[20%]" id="qa-list">
+            <div class="qa-item active">
+              <div
+                class="w-full aspect-[1628/120] bg-[url(./images/page5img1.png)] bg-cover bg-no-repeat flex justify-between items-center px-1 py-1 lg:px-6 lg:py-3"
+              >
+                <div class="text-xs lg:text-2xl">
+                  Birthday Celebration? Emotional Narrative?
+                </div>
+                <div
+                  class="h-full aspect-[1/1] bg-[url(./images/page5img2.png)] bg-contain bg-no-repeat"
+                ></div>
+              </div>
+
+              <div
+                class="qa-item-content w-full bg-[url(./images/page5img3.png)] bg-cover bg-no-repeat px-1 py-1 lg:px-6 lg:py-3 text-xs lg:text-2xl"
+              >
+                Hosting a BELLATOR birthday party could ignite global attention,
+                potentially reaching 10B in buzz.
+                <br />
+                Every November 1st is worth looking forward to.
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <div
+                class="w-full aspect-[1628/120] bg-[url(./images/page5img1.png)] bg-cover bg-no-repeat flex justify-between items-center px-1 py-1 lg:px-6 lg:py-3"
+              >
+                <div class="text-xs lg:text-2xl">
+                  Spiritual Symbol? Mars Pioneer?
+                </div>
+                <div
+                  class="h-full aspect-[1/1] bg-[url(./images/page5img2.png)] bg-contain bg-no-repeat"
+                ></div>
+              </div>
+
+              <div
+                class="qa-item-content w-full bg-[url(./images/page5img3.png)] bg-cover bg-no-repeat px-1 py-1 lg:px-6 lg:py-3 text-xs lg:text-2xl"
+              >
+                Having accompanied Elon for eleven years and witnessed his
+                entrepreneurial journey, BELLATOR has become a true embodiment of
+                meme culture, carrying a potential value of up to $10 billion.
+                <br />
+                As the possible first “resident” on Mars, BELLATOR could symbolize
+                the dawn of Martian civilization and further amplify the spirit
+                of exploration — pushing its symbolic worth ever closer to $10
+                billion.
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <div
+                class="w-full aspect-[1628/120] bg-[url(./images/page5img1.png)] bg-cover bg-no-repeat flex justify-between items-center px-1 py-1 lg:px-6 lg:py-3"
+              >
+                <div class="text-xs lg:text-2xl">
+                  Spiritual Wealth?Blockchain Immortality?
+                </div>
+                <div
+                  class="h-full aspect-[1/1] bg-[url(./images/page5img2.png)] bg-contain bg-no-repeat"
+                ></div>
+              </div>
+              <div
+                class="qa-item-content w-full bg-[url(./images/page5img3.png)] bg-cover bg-no-repeat px-1 py-1 lg:px-6 lg:py-3 text-xs lg:text-2xl"
+              >
+                Settling on Mars would ensure an eternal spiritual presence,
+                transforming BELLATOR into a cross-planetary cultural symbol that
+                continuously empowers the brand.
+                <br />
+                If this story is recorded on the blockchain, it becomes an
+                everlasting fragment, blending technology and emotion, with its
+                value approaching $10 billion.
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <div
+                class="w-full aspect-[1628/120] bg-[url(./images/page5img1.png)] bg-cover bg-no-repeat flex justify-between items-center px-1 py-1 lg:px-6 lg:py-3"
+              >
+                <div class="text-xs lg:text-2xl">
+                  Cosmic-Level Meme? Hardcore Symbol?
+                </div>
+                <div
+                  class="h-full aspect-[1/1] bg-[url(./images/page5img2.png)] bg-contain bg-no-repeat"
+                ></div>
+              </div>
+
+              <div
+                class="qa-item-content w-full bg-[url(./images/page5img3.png)] bg-cover bg-no-repeat px-1 py-1 lg:px-6 lg:py-3 text-xs lg:text-2xl"
+              >
+                Surpassing DOGE, carrying cultural potential, forging the meme
+                spirit.
+                <br />
+                Embodies the entrepreneurial spirit, continuously reinforcing
+                symbolic meaning, unleashing value.
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <div
+                class="w-full aspect-[1628/120] bg-[url(./images/page5img1.png)] bg-cover bg-no-repeat flex justify-between items-center px-1 py-1 lg:px-6 lg:py-3"
+              >
+                <div class="text-xs lg:text-2xl">
+                  Community Leader?Philanthropy & Technology?
+                </div>
+                <div
+                  class="h-full aspect-[1/1] bg-[url(./images/page5img2.png)] bg-contain bg-no-repeat"
+                ></div>
+              </div>
+
+              <div
+                class="qa-item-content w-full bg-[url(./images/page5img3.png)] bg-cover bg-no-repeat px-1 py-1 lg:px-6 lg:py-3 text-xs lg:text-2xl"
+              >
+                Optionally appoint Musk as leader, unify consensus, jointly
+                pursue 10B.
+                <br />
+                Establish foundation, hold Tesla stock, become ecosystem
+                shareholder, strive for 10B.
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <div
+                class="w-full aspect-[1628/120] bg-[url(./images/page5img1.png)] bg-cover bg-no-repeat flex justify-between items-center px-1 py-1 lg:px-6 lg:py-3"
+              >
+                <div class="text-xs lg:text-2xl">IP Derivatives?</div>
+                <div
+                  class="h-full aspect-[1/1] bg-[url(./images/page5img2.png)] bg-contain bg-no-repeat"
+                ></div>
+              </div>
+
+              <div
+                class="qa-item-content w-full bg-[url(./images/page5img3.png)] bg-cover bg-no-repeat px-1 py-1 lg:px-6 lg:py-3 text-xs lg:text-2xl"
+              >
+                Develop NFTs and related products, expand ecosystem and economic
+                value.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-16 pb-8 text-xs lg:text-base text-center">
+          ©2026 All Rights Reserved, $ BELLATOR Community
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const qaList = document.getElementById("qa-list");
+          const qaItems = qaList.querySelectorAll(".qa-item");
+
+          qaItems.forEach((item) => {
+            item.addEventListener("click", function () {
+              // if (item.classList.contains('active')) {
+              //   item.classList.remove('active');
+              //   return;
+              // }
+              qaItems.forEach((i) => {
+                if (i.classList.contains("active")) {
+                  function callback() {
+                    i.classList.remove("closing");
+                    i.removeEventListener("animationend", callback);
+                  }
+                  i.addEventListener("animationend", callback);
+                  i.classList.replace("active", "closing");
+                }
+              });
+              item.classList.add("active");
+            });
+          });
+        });
+      </script>
+      <style>
+        #qa-list .qa-item .qa-item-content {
+          display: none;
+          overflow: hidden;
+        }
+        #qa-list .qa-item.active .qa-item-content {
+          display: block;
+          animation: expandHeight 0.5s ease forwards;
+        }
+        #qa-list .qa-item.closing .qa-item-content {
+          display: block;
+          animation: collapseHeight 0.5s ease forwards;
+        }
+        @keyframes expandHeight {
+          0% {
+            max-height: 0;
+            opacity: 0;
+          }
+          100% {
+            max-height: 100vh;
+            opacity: 1;
+          }
+        }
+        @keyframes collapseHeight {
+          0% {
+            max-height: 100vh;
+            opacity: 1;
+          }
+          100% {
+            max-height: 0;
+            opacity: 0;
+          }
+        }
+      </style>
+      <div>&nbsp;</div>
+    </div>
+  </body>
+</html>
